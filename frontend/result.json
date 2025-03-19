@@ -1,0 +1,31 @@
+[
+    {
+      "type":"บีเวอร์สายหวาน",
+      "image":"/src/type/sweet_beaver.png",
+      "positiveDetail":"ชอบแสดงความรัก",
+      "negativeDetail":"ไม่ชอบแสดงความรัก"
+    },
+    {
+      "type":"บีเวอร์สายอินโทเวิร์ด",
+      "image":"/src/type/introvert_beaver.png",
+      "positiveDetail":"ให้พื้นที่ส่วนตัวซึ่งกันและกัน",
+      "negativeDetail":"ขาดความเชื่อใจระหว่างกัน"
+    },
+    {
+      "type":" บีเวอร์สายซัพพอร์ต",
+      "image":"/src/type/supportive_beaver.png",
+      "positiveDetail":"มีความเอาใจใส่ พร้อมที่จะสนันสนุนคนรัก",
+      "negativeDetail":"ดูแลกันไม่ทั่วถึงเท่าที่ควร"
+    },
+    {
+      "type":"บีเวอร์สายอัลกอลิทึม",
+      "image":"/src/type/algorithm_beaver.png",
+      "positiveDetail":"ใช้เหตุผลในการตัดสินใจ",
+      "negativeDetail":"แสดงความมั่นคงไม่มากพอ"
+    },
+    {
+      "type":"บีเวอร์ครองโสด",
+      "image":"/src/type/single_beaver.png",
+      "positiveDetail":"คุณอาจจะยังไม่เหมาะกับการมีความรัก ค่อย ๆ ทำความรู้ตัวเองและใส่ใจคนรอบตัวให้มากขึ้น สักวันคุณจะกลายเป็นคนที่สมควรได้รับความรักอย่างแน่นอน!"
+    }
+]

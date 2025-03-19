@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeaLover</title>
+    <link rel="icon" type="image/x-icon" href="/src/Logo.png">
+    <style>
+        body {
+            background-color: #FAF8F1;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body onload="seticonmusic()">
+    <div>
+        <i id="musicplayer" onclick="controlMusic(this)" class="fas" style="right: 5px;position: absolute;"></i>
+        <audio id="music" autoplay loop>
+            <source src="/src/music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div id="start-page-container">
+        <div id="appname">BEALOVER</div>
+        <div id="description">ตามหาความรักในแบบที่เป็นคุณ?</div>
+        <div><img id="spin-beaver" src="/src/spin_beaver_400px.GIF" /></div>
+        <div id="display-errortext-start"><br></div>
+        <div id="user-input-container">
+            <input type="text" id="username-input-box" placeholder="ใส่ชื่อของคุณ">
+        </div>
+        <button id="start-btn">เริ่มต้น</button>
+    </div>
+
+    <div id="chapter-all-container">
+        <div id="chapter-container">
+            <div class="line first"></div>
+            <div class="chapter-step active"></div>
+            <div class="chapter-step"></div>
+            <div class="chapter-step"></div>
+        </div>
+        <div id="progress-container">
+            <div class="progress-step active">Chapter 1</div>
+            <div class="progress-step">Chapter 2</div>
+            <div class="progress-step">Chapter 3</div>
+        </div>
+    </div>
+
+    <div id="quiz-container">
+        <p id="question-text"></p>
+        <p><img id="image-display" src="" />
+        <p>
+        <div id="options-container"></div>
+        <div id="display-errortext"><br></div>
+        <button id="next-btn">ถัดไป >></button>
+    </div>
+
+    <div id="result-container">
+        <div id="photo">
+            <p id="type-name"></p>
+            <p><img id="image-result-display" src="" />
+            <p>
+            <p id="predict-percent-match"></p>
+            <button id="showdetail-btn">อ่านรายละเอียดเพิ่มเติม <i class="fa fa-caret-down"
+                    style="margin-left: 8px;"></i></button>
+            <div id="result-detail">
+                <div id="result-text"></div>
+                <div id="graph-wrapper">
+                    <div class="graph-container">
+                        <div class="graph-item">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <!-- Background Circle -->
+                                <circle cx="60" cy="60" r="50" stroke="#EDDFCC" stroke-width="10" fill="none" />
+                                
+                                <!-- Progress Circle -->
+                                <circle class="progress-circle" cx="60" cy="60" r="50" stroke="#D8968F" 
+                                    stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314"
+                                    stroke-linecap="round" transform="rotate(-90, 60, 60)" />
+                                
+                                <!-- Percentage Text -->
+                                <text class="progress-text" x="60" y="65" text-anchor="middle" font-size="20" 
+                                    fill="#726759" font-family="Itim">0%</text>
+                            </svg>
+                            <p class="graph-label">Lovey-Dovey</p>
+                        </div>
+
+                        <div class="graph-item">
+                            <div class="progress-container-circle">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <!-- Background Circle -->
+                                    <circle cx="60" cy="60" r="50" stroke="#EDDFCC" stroke-width="10" fill="none" />
+                                    
+                                    <!-- Progress Circle -->
+                                    <circle class="progress-circle" cx="60" cy="60" r="50" stroke="#D8968F" 
+                                        stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314"
+                                        stroke-linecap="round" transform="rotate(-90, 60, 60)" />
+                                    
+                                    <!-- Percentage Text -->
+                                    <text class="progress-text" x="60" y="65" text-anchor="middle" font-size="20" 
+                                        fill="#726759" font-family="Itim">0%</text>
+                                </svg>
+                            </div>
+                            <p class="graph-label">Space-giving</p>
+                        </div>
+
+                        <div class="graph-item">
+                            <div class="progress-container-circle">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <!-- Background Circle -->
+                                    <circle cx="60" cy="60" r="50" stroke="#EDDFCC" stroke-width="10" fill="none" />
+                                    
+                                    <!-- Progress Circle -->
+                                    <circle class="progress-circle" cx="60" cy="60" r="50" stroke="#D8968F" 
+                                        stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314"
+                                        stroke-linecap="round" transform="rotate(-90, 60, 60)" />
+                                    
+                                    <!-- Percentage Text -->
+                                    <text class="progress-text" x="60" y="65" text-anchor="middle" font-size="20" 
+                                        fill="#726759" font-family="Itim">0%</text>
+                                </svg>
+                            </div>
+                            <p class="graph-label">Caring & Supporting</p>
+                        </div>
+
+                        <div class="graph-item">
+                            <div class="progress-container-circle">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <!-- Background Circle -->
+                                    <circle cx="60" cy="60" r="50" stroke="#EDDFCC" stroke-width="10" fill="none" />
+                                    
+                                    <!-- Progress Circle -->
+                                    <circle class="progress-circle" cx="60" cy="60" r="50" stroke="#D8968F" 
+                                        stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314"
+                                        stroke-linecap="round" transform="rotate(-90, 60, 60)" />
+                                    
+                                    <!-- Percentage Text -->
+                                    <text class="progress-text" x="60" y="65" text-anchor="middle" font-size="20" 
+                                        fill="#726759" font-family="Itim">0%</text>
+                                </svg>
+                            </div>
+                            <p class="graph-label">Logic</p>
+                        </div>
+                        
+                        <div id="mu-container">
+                            <div><img id="pra-mae-img" src="/src/Pra-Mae.PNG" /></div>
+                            <div id="mu-suggestion"></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <br>
+        </div>
+
+        <button id="share-btn">แชร์<i class="fa fa-share" style="margin-left: 8px;"></i></button>
+        <div id="share-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="share-word"><i class="fa fa-star fa-1" aria-hidden="true"
+                        style="margin-right: 5px"></i>แชร์ผลลัพธ์<i class="fa fa-star fa-1" aria-hidden="true"
+                        style="margin-left: 5px"></i></i></h2>
+                <button id="save-image"><i class="fa fa-camera" aria-hidden="true" style="margin-right: 5px"></i>
+                    บันทึกภาพ</button>
+                <button id="copy-link"><i class="fa fa-link" aria-hidden="true" style="margin-right: 5px"></i>
+                    คัดลอกลิงก์</button>
+                <button id="share-facebook"><i class="fa fa-facebook" aria-hidden="true" style="margin-right: 5px"></i>
+                    แชร์ไปยัง Facebook</button>
+                <button id="share-twitter"><i class="fa fa-twitter" aria-hidden="true" style="margin-right: 5px"></i>
+                    แชร์ไปยัง X</button>
+            </div>
+        </div>
+
+        <button id="restart-btn">เริ่มใหม่อีกครั้ง<i class="fa fa-repeat" style="margin-left: 8px;"></i></button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdE3S4gNlGZOWsk0QVJTHyNikCFuwAGjS2_btoZeK_AG9Y94Q/viewform?usp=dialog" target="_blank">แบบประเมิน<i class="far fa-file-alt" style="margin-left: 8px;"></i></a>
+        
+        <br>
+        <button id="showcredit-btn">ทีมผู้สร้าง</button>
+        <div id="credit-detail">
+            <ul style="margin-left: 50px; text-align: left;">
+                <li>Ai_</li>
+                <li>Thirada</li>
+                <li>Guitardesu</li>
+                <li>Pumwaree Pipithsuksunt</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>

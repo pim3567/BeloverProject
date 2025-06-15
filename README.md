@@ -2,7 +2,7 @@
 
 ## About the Project
 
-This project was developed for the **10 Days Project Challenge** competition organized by **Thinc Club at Chulalongkorn University**.
+This project was developed for the **10 Days Project Challenge 2025** competition organized by **Thinc Club at Chulalongkorn University**.
 
 **Bealover** is a fun and light-hearted website where users answer short personality quiz questions through the perspective of an adorable beaver mascot. The goal is to reflect on one's thoughts and attitudes towards love.
 

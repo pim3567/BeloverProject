@@ -1,4 +1,5 @@
 # Bealover
+👉 [View Demo](https://bea-lover.vercel.app/)
 
 ## About the Project
 
@@ -16,8 +17,6 @@ This symbolizes that we should not cling to past loves but be courageous enough 
 
 
 
-👉 [View Demo](https://bea-lover.vercel.app/)
-
 ## Technical Details
 
 - **Design:** Figma  
@@ -28,6 +27,7 @@ This symbolizes that we should not cling to past loves but be courageous enough 
 
 ## Our Team
 
-- Member1  
-- Member2  
-- Member3  
+- [Ai_](https://github.com/AiSiriRak)
+- [Thirada](https://github.com/pim3567)
+- [Guitardesu](https://github.com/gloryguitar)
+- [Pumwaree Pipithsuksunt](https://github.com/PaMEllAaaa)
